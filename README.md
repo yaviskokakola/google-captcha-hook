@@ -8,33 +8,31 @@ invisible google captcha hook for React & Next.js
 <img src="https://img.shields.io/static/v1?label=minzipped&message=0.6kb&color=%23219c6e">
 </div>
 
-##  📦  Installation
+## 📦 Installation
 
 npm:
 `npm i google-captcha-hook`
-yarn: 
-`yarn add google-captcha-hook`	
+yarn:
+`yarn add google-captcha-hook`
 pnpm
 `pnpm add google-captcha-hook`
 bun
 `bun i google-captcha-hook`
 
-## ✨  Feature list
+## ✨ Feature list
 
- - [x] Typescript support
- - [x] Regenerate Token
- - [x] Super minimal package 
+- [x] Typescript support
+- [x] Regenerate Token
+- [x] Super minimal package
 
-
-## 📝  Usage
+## 📝 Usage
 
 ```jsx
-import { useGoogleRecaptcha } from  'google-captcha-hook'
+import { useGoogleRecaptcha } from 'google-captcha-hook';
 
 export const App = () => {
-	const { token } = useGoogleRecaptcha("your google recaptcha v3 site key")
-}
-
+  const { token } = useGoogleRecaptcha('your google recaptcha v3 site key');
+};
 ```
 
 ## 📄 API
@@ -45,8 +43,7 @@ in [reCaptcha](https://www.google.com/recaptcha/about/) create v3 google recaptc
 const { token } = useGoogleRecaptcha(SITE_KEY)
 ```
 
-
-| Name | Type |  Description |
-|--|--|--|--|--|
-| token | string | generated token by google v3 recaptcha |
-| regenerate | `() => void` | regenerate token if it expired or not| 
+| Name       | Type         | Description                            |
+| ---------- | ------------ | -------------------------------------- |
+| token      | string       | generated token by google v3 recaptcha |
+| regenerate | `() => void` | regenerate token if it expired or not  |
