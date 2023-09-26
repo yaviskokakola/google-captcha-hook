@@ -1,13 +1,13 @@
 {
   "name": "google-captcha-hook",
   "description": "Minimal Invisible google reacaptcha for react ✨",
-  "version": "0.1.0",
+  "version": "1.0.4",
   "author": "yaviskokakola",
   "license": "MIT",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/yaviskokakola/google-captcha-hook"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
