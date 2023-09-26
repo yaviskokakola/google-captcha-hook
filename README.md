@@ -10,13 +10,12 @@ invisible google captcha hook for React & Next.js
 
 ## 📦 Installation
 
-npm:
 `npm i google-captcha-hook`
-yarn:
+
 `yarn add google-captcha-hook`
-pnpm
+
 `pnpm add google-captcha-hook`
-bun
+
 `bun i google-captcha-hook`
 
 ## ✨ Feature list
@@ -39,7 +38,7 @@ export const App = () => {
 
 in [reCaptcha](https://www.google.com/recaptcha/about/) create v3 google recaptcha copy your site key and pass to argument of hook
 
-```
+```jsx
 const { token } = useGoogleRecaptcha(SITE_KEY)
 ```
 
