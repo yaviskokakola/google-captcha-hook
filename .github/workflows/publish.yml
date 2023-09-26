@@ -1,4 +1,4 @@
-name: player
+name: publish
 
 on:
   push:
@@ -14,10 +14,12 @@ jobs:
         with:
           node-version: lts/*
           registry-url: https://registry.npmjs.org/
+      - name: Set up secret file
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: bun i
       - run: bun run build
-      - run: |
+      - name: Publish to npm
+        run: |
           echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
           npm publish
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
