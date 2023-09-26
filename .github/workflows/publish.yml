@@ -14,9 +14,8 @@ jobs:
         with:
           node-version: lts/*
           registry-url: https://registry.npmjs.org/
-      - name: Set up secret file
-          env:
-            NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: bun i
       - run: bun run build
       - name: Publish to npm
