@@ -7,6 +7,7 @@ export const useGoogleRecaptcha = (siteKey: string): GoogleRecaptchaType => {
   const createToken = () => {
     const script = document.createElement('script');
     script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.id = 'google-captcha-hook';
 
     script.addEventListener('load', () => {
       (window as MergeWindowAndGrecaptcha).grecaptcha.ready(() => {
@@ -19,6 +20,7 @@ export const useGoogleRecaptcha = (siteKey: string): GoogleRecaptchaType => {
   };
 
   React.useEffect(() => {
+    document.getElementById('google-captcha-hook')?.remove();
     createToken();
   }, []);
 

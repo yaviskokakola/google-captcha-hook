@@ -39,7 +39,7 @@ export const App = () => {
 in [reCaptcha](https://www.google.com/recaptcha/about/) create v3 google recaptcha copy your site key and pass to argument of hook
 
 ```jsx
-const { token } = useGoogleRecaptcha(SITE_KEY)
+const { token } = useGoogleRecaptcha(SITE_KEY);
 ```
 
 | Name       | Type         | Description                            |
