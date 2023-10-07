@@ -46,3 +46,4 @@ const { token } = useGoogleRecaptcha(SITE_KEY);
 | ---------- | ------------ | -------------------------------------- |
 | token      | string       | generated token by google v3 recaptcha |
 | regenerate | `() => void` | regenerate token if it expired or not  |
+
